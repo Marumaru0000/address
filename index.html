@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>郵便番号から住所を取得</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .main {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            height: 100vh;
+            background: url('https://japan-map.com/wp-content/uploads/nihonchizu-dot-color-500x500.png') no-repeat center center fixed;
+        }
+        @media (max-width: 576px) {
+            .main {
+                background-image: url('https://japan-map.com/wp-content/uploads/nihonchizu-dot-color-500x500.png');
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center py-3 bg-primary text-white">
+        <h1>郵便番号から住所を取得</h1>
+    </header>
+    <main class="container main mt-4">
+        <form id="postcodeForm" class="form-inline">
+            <label for="postcode" class="mr-2">郵便番号:</label>
+            <input type="text" id="postcode" name="postcode" class="form-control mr-2" required>
+            <button type="submit" class="btn btn-primary">住所を取得</button>
+        </form>
+        <p id="addressResult" class="mt-4"></p>
+    </main>
+    <footer class="text-center py-3 bg-primary text-white mt-4">
+        <p>© 2023 Your Company Name</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
